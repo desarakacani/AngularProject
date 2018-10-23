@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
     public totalPages = [];
     public currentPage = 1;
     public showClass = false;
+    public currentUser;
 
     constructor(private _usersService: UsersService) {
     }
@@ -50,5 +51,9 @@ export class AppComponent implements OnInit {
 
     showMenu() {
         this.showClass = !this.showClass;
+    }
+
+    setCurrentUser(index) {
+        this.currentUser = index;
     }
 }

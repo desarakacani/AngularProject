@@ -48,7 +48,6 @@
     </nav>
 </header>
 
-
 <div class="mx-lg-5 mx-1 mx-sm-1 mx-md-4 my-sm-1 my-lg-3 my-md-3">
     <div class="container mt-4 border-bottom">
 
@@ -106,7 +105,7 @@
 
         <div class="row mt-4">
             <div class="col-12">
-                <div class="table-responsive">
+                <div class="table-responsive p-1">
                     <table class="table">
                         <thead class="shadow table-borderless">
                         <tr>
@@ -131,8 +130,8 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let user of users">
-                            <td><label><input class="radio-table" type="radio" name="optradio"></label></td>
+                        <tr *ngFor="let user of users; let i = index" (click)="setCurrentUser(i)" [ngClass]="{'active-row': i === currentUser}">
+                            <td><label><input class="radio-table {{i}}" type="radio" name="optradio"></label></td>
                             <td class="pl-0">
                                 <img class="img-responsive profile-pic" src="{{user.avatar}}">
                                 {{user.first_name}} {{user.last_name}}
@@ -177,7 +176,6 @@
         </div>
 
     </div>
-
 </div>
 
 
