@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
     public users = [];
     public totalPages = [];
     public currentPage = 1;
-    public showClass = false;
     public currentUser;
 
     constructor(private _usersService: UsersService) {
@@ -49,9 +48,7 @@ export class AppComponent implements OnInit {
         this.getUsers(page);
     }
 
-    showMenu() {
-        this.showClass = !this.showClass;
-    }
+
 
     setCurrentUser(index) {
         this.currentUser = index;

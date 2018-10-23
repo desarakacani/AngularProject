@@ -1,52 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<header>
-    <nav class="navbar navbar-light navbar-expand-md justify-content-center shadow-sm">
-        <a href="#" class="navbar-brand mr-0">
-            <i class="fa fa-map-marker fa-nav"><span class="nav-brand-text">ClearMove</span></i>
-        </a>
-        <button class="navbar-toggler ml-1" (click)="showMenu()" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div [ngClass]="{show: showClass}" class="navbar-collapse collapse justify-content-between align-items-center w-100 nav-margin"  id="collapsingNavbar2">
-            <ul class="navbar-nav mx-auto text-center">
-                <li class="nav-item">
-                    <a class="nav-link disabled text-uppercase" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled text-uppercase active-nav text-active-nav" href="#">Human Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled text-uppercase" href="#">Finance</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled text-uppercase" href="#">Reports</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled text-uppercase" href="#">Settings</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span>
-                            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-                                 alt="user" class="profile-pic">
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                     <span id="ex4">
-                      <span class="p1 fa-stack  has-badge" data-count="">
-                        <i class="p3 fa fa-bell-o fa-stack-1x xfa-inverse fa-nav"></i>
-                      </span>
-                     </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+<app-navbar></app-navbar>
 
 <div class="mx-lg-5 mx-1 mx-sm-1 mx-md-4 my-sm-1 my-lg-3 my-md-3">
     <div class="container mt-4 border-bottom">
@@ -59,31 +12,31 @@
             <div class="col-md-7 col-sm-12 col-xs-12">
                 <div class="d-flex justify-content-start">
                     <div class="col-md-4 col-sm-4 col-xs-12 p-2 bd-highlight text">
-                      <div>
-                          Policy:
-                          <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
-                              <i class="fa fa-circle fa-button-circle"></i> All
-                          </button>
-                          <i class="fa fa-angle-down ml-2"></i>
-                      </div>
+                        <div>
+                            Policy:
+                            <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
+                                <i class="fa fa-circle fa-button-circle"></i> All
+                            </button>
+                            <i class="fa fa-angle-down ml-2"></i>
+                        </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 p-2 bd-highlight text">
-                       <div>
-                           Status:
-                           <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
-                               <i class="fa fa-circle fa-button-circle"></i> All
-                           </button>
-                           <i class="fa fa-angle-down ml-2"></i>
-                       </div>
+                        <div>
+                            Status:
+                            <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
+                                <i class="fa fa-circle fa-button-circle"></i> All
+                            </button>
+                            <i class="fa fa-angle-down ml-2"></i>
+                        </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 p-2 bd-highlight text">
-                       <div>
-                           Progress:
-                           <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
-                               <i class="fa fa-circle fa-button-circle"></i> All
-                           </button>
-                           <i class="fa fa-angle-down ml-2"></i>
-                       </div>
+                        <div>
+                            Progress:
+                            <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
+                                <i class="fa fa-circle fa-button-circle"></i> All
+                            </button>
+                            <i class="fa fa-angle-down ml-2"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,7 +83,8 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let user of users; let i = index" (click)="setCurrentUser(i)" [ngClass]="{'active-row': i === currentUser}">
+                        <tr *ngFor="let user of users; let i = index" (click)="setCurrentUser(i)"
+                            [ngClass]="{'active-row': i === currentUser}">
                             <td><label><input class="radio-table {{i}}" type="radio" name="optradio"></label></td>
                             <td class="pl-0">
                                 <img class="img-responsive profile-pic" src="{{user.avatar}}">
@@ -143,20 +97,23 @@
                             <td>{{user.first_name}}</td>
                             <td>{{user.last_name}}</td>
                             <td class="width-td">
-                                <button href="#" class="btn btn-primary btn-operation px-3"><i class="fa fa-pencil fa-operation"></i></button>
+                                <button href="#" class="btn btn-primary btn-operation px-3"><i
+                                        class="fa fa-pencil fa-operation"></i></button>
                             </td>
                             <td class="width-td">
-                                <button href="#" class="btn btn-primary btn-operation px-3"><i class="fa fa-trash fa-operation"></i></button>
+                                <button href="#" class="btn btn-primary btn-operation px-3"><i
+                                        class="fa fa-trash fa-operation"></i></button>
                             </td>
                             <td class="width-td">
-                                <button href="#" class="btn btn-primary btn-operation px-3"><i class="fa fa-ellipsis-h fa-operation"></i></button>
+                                <button href="#" class="btn btn-primary btn-operation px-3"><i
+                                        class="fa fa-ellipsis-h fa-operation"></i></button>
                             </td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="col-12" >
+            <div class="col-12">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-end">
                         <li class="page-item" [ngClass]="{disabled: currentPage===1}">
