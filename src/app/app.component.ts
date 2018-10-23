@@ -10,17 +10,17 @@ export class AppComponent implements OnInit {
     title = 'my-app';
 
     public users = [];
-    public totalPages: [] = [];
+    public totalPages = [];
     public currentPage = 1;
 
     constructor(private _usersService: UsersService) {
     }
 
     ngOnInit() {
-        this._usersService.getUsers()
+        this._usersService.getUsers(1)
             .subscribe(users => {
                 this.users = users.data;
-                this.totalPages = Array(users.total_pages).fill().map((x, i) => i);
+                this.totalPages = Array.apply(null, {length: users.total_pages}).map(Number.call, Number);
             });
     }
 
@@ -34,7 +34,6 @@ export class AppComponent implements OnInit {
 
     next() {
         this.currentPage += 1;
-        console.log(this.currentPage);
         this.getUsers(this.currentPage)
     }
 
@@ -45,7 +44,6 @@ export class AppComponent implements OnInit {
 
     goToPage(page) {
         this.currentPage = page;
-        console.log(this.currentPage);
         this.getUsers(page);
     }
 }
