@@ -1,0 +1,24 @@
+@import "../../../variables"
+
+.page-item.active .page-link
+  z-index: 1
+  color: #fff
+  background-color: $base-color
+  border-color: $base-color
+
+.page-item
+  a
+    color: $base-color
+
+.page-link:focus
+  z-index: 2
+  outline: 0
+  box-shadow: none
+
+::selection
+  background-color: $base-color
+  color: white
+
+::-moz-selection
+  background: $base-color
+  color: white
