@@ -4,7 +4,6 @@
     <div class="container mt-4">
 
         <app-filters></app-filters>
-
         <div class="row mt-4">
             <div class="col-12">
                 <div class="table-responsive p-1">
@@ -32,6 +31,10 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <div *ngIf="loadingTable" class="col-12 justify-content-between">
+                            <i class="fa fa-spinner fa-spin fa-2x"></i>
+                        </div>
+
                         <tr *ngFor="let user of users; let i = index" (click)="setCurrentUser(i)"
                             [ngClass]="{'active-row': i === currentUser}">
                             <td><label><input class="radio-table {{i}}" type="radio" name="optradio"></label></td>
