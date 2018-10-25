@@ -13,27 +13,29 @@
   font-size: 1em !important
   font-weight: 800
 
-.text-table
-  color: gray
-  font-size: .9em
+th
+  color: $gray-color
+  font-size: $base-font
   font-weight: 600
   text-transform: uppercase
 
-.text
-  color: gray
-  font-size: .9em
-  font-weight: 400
-
 .btn-operation
-  background-color: #e0fafb
-  border-color: #e0fafb
+  background-color: $operation-btn-color
+  border-color: $operation-btn-color
   border-radius: 17px
   font-size: .8em
 
 .btn-operation:not(:disabled):not(.disabled):active,
 .btn-operation:not(:disabled):not(.disabled).active
-  background-color: #e0fafb
-  border-color: #e0fafb
+  background-color: $operation-btn-color
+  border-color: $operation-btn-color
+
+.btn-operation:hover
+  background-color: $operation-btn-color
+  border-color: $operation-btn-color
+
+.btn-operation:focus, .btn-operation.focus
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.5)
 
 .fa-operation
   color: $base-color
