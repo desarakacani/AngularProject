@@ -8,29 +8,19 @@
       <div class="col-md-4 col-sm-4 col-xs-12 filter-text p-2">
         Policy:
         <div class="d-inline-flex">
-          <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
-            <i class="fa fa-circle fa-button-circle"></i> All
-          </button>
-          <i class="fa fa-angle-down ml-2 my-auto"></i>
+          <app-dropdown [options]="firstDropDown"></app-dropdown>
         </div>
       </div>
       <div class="col-md-4 col-sm-4 col-xs-12 filter-text p-2">
         Status:
         <div class="d-inline-flex">
-
-          <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
-            <i class="fa fa-circle fa-button-circle"></i> All
-          </button>
-          <i class="fa fa-angle-down ml-2 my-auto"></i>
+          <app-dropdown [options]="secondDropDown"></app-dropdown>
         </div>
       </div>
       <div class="col-md-4 col-sm-4 col-xs-12 p-2 filter-text">
         Progress:
         <div class="d-inline-flex">
-          <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
-            <i class="fa fa-circle fa-button-circle"></i> All
-          </button>
-          <i class="fa fa-angle-down ml-2 my-auto"></i>
+          <app-dropdown [options]="thirdDropDown"></app-dropdown>
         </div>
       </div>
     </div>

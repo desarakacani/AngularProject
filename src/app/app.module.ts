@@ -7,13 +7,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
 import { FiltersComponent } from './shared/filters/filters.component';
+import { DropdownComponent } from './shared/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PaginationComponent,
-    FiltersComponent
+    FiltersComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
