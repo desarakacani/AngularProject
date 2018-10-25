@@ -42,7 +42,7 @@
                             <td>
                                 {{user.first_name}} {{user.last_name}}
                             </td>
-                            <td scope="row">{{user.id}}</td>
+                            <td scope="row" [ngClass]="{isOdd : i%2 === 1, 'isEven' : i%2 === 0}">{{user.id}}</td>
                             <td>{{user.first_name}}</td>
                             <td>{{user.last_name}}</td>
                             <td class="width-td">
