@@ -1,8 +1,8 @@
 <button  type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2" (click)="showDropdown()">
-    <i class="fa fa-circle fa-button-circle {{buttonColor}}"></i> {{selectedItem.name}}
+    <i class="fa fa-circle fa-button-circle {{buttonColor}}"></i> {{selectedItem.name | titlecase }}
 </button>
 <i class="fa fa-angle-down ml-1 my-auto"></i>
 
 <div class="dropdown-menu" [ngClass]="{show : show}">
-    <a *ngFor="let item of items" class="dropdown-item {{item.cssClass}}" href="#" (click)="selectItem(item)">{{item.name}}</a>
+    <a *ngFor="let item of items" class="dropdown-item {{item.cssClass}}" href="#" (click)="selectItem(item)">{{item.name | titlecase}}</a>
 </div>
