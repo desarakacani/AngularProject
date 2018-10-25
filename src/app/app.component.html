@@ -4,57 +4,7 @@
 <div class="mx-lg-5 mx-1 mx-sm-1 mx-md-4 my-sm-1 my-lg-3 my-md-3">
     <div class="container mt-4 border-bottom">
 
-        <div class="row mt-5">
-            <h5 class="ml-4">Employees(24)</h5>
-        </div>
-
-        <div class="row mt-2 pl-0">
-            <div class="col-md-7 col-sm-12 col-xs-12">
-                <div class="d-flex justify-content-start">
-                    <div class="col-md-4 col-sm-4 col-xs-12 p-2 bd-highlight text">
-                        <div>
-                            Policy:
-                            <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
-                                <i class="fa fa-circle fa-button-circle"></i> All
-                            </button>
-                            <i class="fa fa-angle-down ml-2"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 p-2 bd-highlight text">
-                        <div>
-                            Status:
-                            <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
-                                <i class="fa fa-circle fa-button-circle"></i> All
-                            </button>
-                            <i class="fa fa-angle-down ml-2"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 p-2 bd-highlight text">
-                        <div>
-                            Progress:
-                            <button type="button" class="btn btn-secondary btn-sm btn-all px-3 py-2">
-                                <i class="fa fa-circle fa-button-circle"></i> All
-                            </button>
-                            <i class="fa fa-angle-down ml-2"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5 col-sm-12 col-xs-12">
-                <div class="d-flex justify-content-md-end justify-content-sm-start justify-content-xs-start">
-                    <div class="p-2 bd-highlight">
-                        <i class="fa fa-search fa-search-custom"></i>
-                    </div>
-
-                    <div class="p-2 bd-highlight">
-                        <button type="button" class="px-4 btn btn-primary btn-add py-2">
-                            <i class="fa fa-plus"></i>
-                            Add Employee
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <app-filters></app-filters>
 
         <div class="row mt-4">
             <div class="col-12">
@@ -113,22 +63,9 @@
                     </table>
                 </div>
             </div>
+
             <div class="col-12">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-end">
-                        <li class="page-item" [ngClass]="{disabled: currentPage===1}">
-                            <a (click)="previous()" class="page-link page-text" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li [ngClass]="{active: currentPage===page+1}" class="page-item"
-                            *ngFor="let page of totalPages"><a
-                                (click)="goToPage(page+1)"
-                                class="page-link page-text"
-                                href="#">{{page+1}}</a></li>
-                        <li class="page-item" [ngClass]="{disabled: currentPage===(totalPages).length}">
-                            <a (click)="next()" class="page-link page-text" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+                <app-pagination (getUsersEvent)="getUsers($event)" [totalPages]="totalPages"></app-pagination>
             </div>
         </div>
 

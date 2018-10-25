@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {UsersService} from './users.service';
+import {Component, OnInit, Input} from '@angular/core';
+import {UsersService} from './services/users.service';
 
 @Component({
     selector: 'app-root',
@@ -11,7 +11,6 @@ export class AppComponent implements OnInit {
 
     public users = [];
     public totalPages = [];
-    public currentPage = 1;
     public currentUser;
 
     constructor(private _usersService: UsersService) {
@@ -32,23 +31,6 @@ export class AppComponent implements OnInit {
             }
         )
     }
-
-    next() {
-        this.currentPage += 1;
-        this.getUsers(this.currentPage)
-    }
-
-    previous() {
-        this.currentPage -= 1;
-        this.getUsers(this.currentPage)
-    }
-
-    goToPage(page) {
-        this.currentPage = page;
-        this.getUsers(page);
-    }
-
-
 
     setCurrentUser(index) {
         this.currentUser = index;

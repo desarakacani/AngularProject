@@ -2,14 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {UsersService} from './users.service';
+import {UsersService} from './services/users.service';
 import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
+import { FiltersComponent } from './shared/filters/filters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    PaginationComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
