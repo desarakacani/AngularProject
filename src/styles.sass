@@ -1,8 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css"
 @import "~font-awesome/css/font-awesome.css"
-
-$base-color: #00bed8
+@import "variables"
 
 #ex4 .p1[data-count]:after
   position: absolute
@@ -18,29 +17,6 @@ $base-color: #00bed8
   text-align: center
   min-width: 1em
 
-.btn-all
-  border-radius: 19px
-  color: black
-  background-color: #f0f4f6
-  border-color: #f0f4f6
-
-.fa-button-circle
-  color: #a6bbc4
-
-.btn-add
-  border-radius: 19px
-  background-color: $base-color
-  border-color: $base-color
-  font-size: .8em
-
-.btn-add:not(:disabled):not(.disabled):active,
-.btn-add:not(:disabled):not(.disabled).active
-  background-color: $base-color
-  border-color: $base-color
-
-.btn-add:not(:disabled):not(.disabled):active:focus,
-.btn-add:not(:disabled):not(.disabled).active:focus
-  box-shadow: 0 0 0 0.2rem rgb(0, 190, 216)
 
 .margin-top-3
   margin-top: 3%
@@ -139,12 +115,6 @@ $base-color: #00bed8
 
 .nav-item a
   font-weight: 700 !important
-
-.fa-search-custom
-  color: #a3b4bb
-  font-weight: 100
-  font-size: 1em
-  vertical-align: -webkit-baseline-middle
 
 .active-row
   background-color: rgba(0, 0, 0, 0.1) !important
