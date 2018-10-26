@@ -10,7 +10,7 @@ export class DropdownComponent implements OnInit {
     show = false;
     @Input() options: any;
     selectedItem: any;
-    items: [any];
+    items: any[];
     buttonColor;
 
     constructor() {

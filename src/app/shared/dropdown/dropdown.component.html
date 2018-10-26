@@ -4,5 +4,5 @@
 <i class="fa fa-angle-down ml-1 my-auto"></i>
 
 <div class="dropdown-menu" [ngClass]="{show : show}">
-    <a *ngFor="let item of items" class="dropdown-item {{item.cssClass}}" href="#" (click)="selectItem(item)">{{item.name | titlecase}}</a>
+    <a *ngFor="let item of items" class="dropdown-item" href="#" (click)="selectItem(item)">{{item.name | titlecase}}</a>
 </div>
